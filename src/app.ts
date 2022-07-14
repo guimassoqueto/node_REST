@@ -8,7 +8,7 @@ import allowCors from './middlewares/allowCors.middleware';
 
 // constants
 const app: Express = express();
-const PORT: number = 3000;
+const PORT: number = 8000;
 
 // middlewares
 app.use(bodyParser.json({

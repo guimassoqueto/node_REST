@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc -w",
+    "build": "tsc --build",
     "nodemon": "nodemon dist/app.js"
   },
   "repository": {
