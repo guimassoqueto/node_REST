@@ -1,6 +1,7 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
 // npm middlewares imports
 import bodyParser from "body-parser";
+import { body } from "express-validator";
 // routes imports
 import { postsRoute } from "./routes/posts.route";
 // custom middlewares
@@ -17,7 +18,10 @@ app.use(bodyParser.json({
 // middleware cors
 app.use(allowCors)
 
-// handling routes
-app.use(postsRoute);
+// handling routes and validator middleware
+app.use('/feed', [
+    body('title').trim().isLength({min: 5}),
+    body('content').trim().isLength({min: 5})
+], postsRoute);
 
 app.listen(PORT, 'localhost', () => console.log(`Server is listening on port ${PORT}...`))

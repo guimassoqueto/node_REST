@@ -1,0 +1,9 @@
+POST http://localhost:8000/feed/post
+Content-Type: application/json
+
+{
+    "title": "Pod",
+    "author": "G. A. Massoqueto",
+    "imageUrl": "https://picsum.photos/301",
+    "content": "Con"
+}

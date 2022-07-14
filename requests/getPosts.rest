@@ -1,0 +1,2 @@
+GET  http://localhost:8000/feed/posts
+Content-Type: application/json
