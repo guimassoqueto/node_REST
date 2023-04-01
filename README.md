@@ -1,3 +1,3 @@
-# backend_uproject
+# typescript-backend-project
 
 REST API backend for uproject
